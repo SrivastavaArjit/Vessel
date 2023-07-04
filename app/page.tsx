@@ -1,9 +1,11 @@
 import Card from "@/components/Card";
+import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
     <main>
+      <Header />
       <div className="flex justify-around px-14 py-16 bg-neon">
         <div className="flex-grow">
           <h1 className="my-5 font-normal text-black text-5xl xl:text-6xl">

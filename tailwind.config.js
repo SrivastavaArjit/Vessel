@@ -36,6 +36,9 @@ module.exports = {
       fontSize: {
         xxs: "0.50rem",
       },
+      transitionDuration: {
+        login: "800ms",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
