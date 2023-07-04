@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button } from "./ui/button";
+import { Button, buttonVariants } from "./ui/button";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import {
   DropdownMenu,
@@ -10,6 +10,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { cn } from "@/lib/utils";
 
 const Header = () => {
   return (
@@ -38,9 +39,15 @@ const Header = () => {
             <Link href="#">ClosetGoals</Link>
           </li>
         </ul>
-        <Button className="ml-auto rounded-full bg-transparent text-black border-black border w-24 hover:text-white -mr-2">
-          Style
-        </Button>
+        <Link
+          href="/login"
+          className={cn(
+            buttonVariants(),
+            "ml-auto rounded-full bg-transparent text-black border-black border w-24 hover:text-white -mr-2"
+          )}
+        >
+          Sign In
+        </Link>
         <div className="lg:hidden">
           <DropdownMenu>
             <DropdownMenuTrigger className="bg-black p-2 rounded-full">
