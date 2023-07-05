@@ -7,9 +7,7 @@ import { FaGoogle } from "react-icons/fa";
 const SignUpCard = ({ setMode }: { setMode: (val: string) => void }) => {
   return (
     <form className="flex flex-col justify-center gap-2 px-16 w-[80%]">
-      <h1 className="text-3xl font-bold break-[balance]">
-        Create Your Account
-      </h1>
+      <h1 className="text-3xl font-bold ">Create Your Account</h1>
       <p className="mb-6 break-[balance]">Enter your details</p>
       <label htmlFor="email" className="font-bold">
         Email
@@ -17,7 +15,7 @@ const SignUpCard = ({ setMode }: { setMode: (val: string) => void }) => {
       <input
         type="email"
         required
-        className="ring-1 ring-black rounded-md p-2 mb-2 h-[40px] bg-neon text-black focus:outline-none"
+        className="ring-1 ring-black rounded-md p-2 mb-2 h-[40px]   "
         name="email"
       />
       <label htmlFor="password" className="font-bold">
@@ -26,12 +24,12 @@ const SignUpCard = ({ setMode }: { setMode: (val: string) => void }) => {
       <input
         type="password"
         required
-        className="ring-1 ring-black mb-6 rounded-md p-2 h-[40px] bg-neon text-black focus:outline-none"
+        className="ring-1 ring-black mb-6 rounded-md p-2 h-[40px]  "
         name="password"
       />
       <button
         type="submit"
-        className="ring-black p-2 rounded-md ring-1 mb-4 hover:bg-black/80 text-white bg-black"
+        className="ring-amber-400 p-2 rounded-md ring-1 mb-4 hover:bg-amber-500/80 text-white  bg-amber-500"
       >
         SIGN UP
       </button>

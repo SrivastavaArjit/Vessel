@@ -1,46 +1,34 @@
 import Card from "@/components/Card";
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
+import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 
 export default function Home() {
   return (
     <main>
       <Header />
-      <div className="flex justify-around px-14 py-16 bg-neon">
-        <div className="flex-grow">
-          <h1 className="my-5 font-normal text-black text-5xl xl:text-6xl">
-            THE FASHIONISTA&apos;S DIARY:
+      <div className="flex items-center justify-between px-14 py-16 bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('https://bridge180.qodeinteractive.com/wp-content/uploads/2018/03/home-slider-1.jpg')] bg-cover bg-[50%_5%] rounded-3xl h-[100vh]">
+        <div className="text-center lg:text-left">
+          <h1 className="my-5 font-normal text-white text-5xl xl:text-6xl">
+            Simplicity is the ultimate <br /> sophistication:
           </h1>
-          <h2 className="my-5 text-5xl xl:text-6xl text-black font-normal">
-            LET&apos;S START{" "}
-            <span className="text-gray-600 italic text-base">
-              TRUSTED BY 10+ COMPANIES
-            </span>
-          </h2>
-
-          <div className="my-10 py-5">
-            <h3 className="text-gray-600 my-4">CHIC AND SUSTAINABLE STYLE</h3>
-            <p className="text-xs font-medium">
-              A. Redifining Fashion sustainability
-            </p>
-            <p className="text-xs font-medium">
-              B. Sustainable Fashion for Modern Women
-            </p>
-            <p className="text-xs font-medium">
-              C. The Timeless Beauty of Fashion
-            </p>
-          </div>
-          <Button className="border border-black rounded-full bg-transparent text-black text-xs hover:text-white h-1">
-            SHOP NOW AND LOOK FABULOUS
+          <Button className="border border-white rounded-full bg-transparent text-white text-xs h-12 py-4 px-6 mr-2">
+            2023 Lookbook
+          </Button>
+          <Button className="border border-white rounded-full bg-white text-black font-bold text-xs h-12 py-4 px-6">
+            Shop Now <ArrowTopRightIcon className="ml-2 font-bold" />
           </Button>
         </div>
         <div className="font-medium mr-7 hidden lg:block">
-          <p className="text-[12em] xl:text-[15em]  -mt-16">20</p>
-          <p className="text-[12em] xl:text-[15em] md:-mt-24  lg:-mt-30 xl:-mt-36">
+          <p className="text-[12em] xl:text-[15em] text-white -mt-16">20</p>
+          <p className="text-[12em] xl:text-[15em] md:-mt-24 text-white lg:-mt-30 xl:-mt-36">
             23
           </p>
         </div>
       </div>
+      <hr className="mt-10" />
+      <div>this is the div</div>
+      <hr className="mb-10" />
       <Card />
     </main>
   );

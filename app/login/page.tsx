@@ -15,39 +15,37 @@ const Page = () => {
   let circleEffect;
 
   if (mode === "sign-in") {
-    signUpEffect = "left-[50%] opacity-0 invisible text-white";
-    signInEffect = "left-[50%] opacity-1 visible";
+    signUpEffect = "left-[50%]  invisible";
+    signInEffect = "left-[50%]  visible  [transition-delay:0s,0.4s]";
     bgEffect = "left-0";
-    // circleEffect = "opacity-1";
-    circleEffect = "bg-neon";
+    circleEffect = "bg-red-400";
   } else {
-    signUpEffect = "left-0 opacity-1 visible";
-    signInEffect = "left-0 opacity-0 invisible text-neon";
+    signUpEffect = "left-0  visible [transition-delay:0s,0.4s]";
+    signInEffect = "left-0  invisible";
     bgEffect = "left-[50%]";
-    // circleEffect = "opacity-0";
-    circleEffect = "bg-white";
+    circleEffect = "bg-amber-500";
   }
 
   return (
     <>
-      <main className="flex h-screen relative overflow-hidden bg-black">
+      <main className="flex h-screen relative overflow-hidden ">
         <div
-          className={`absolute flex flex-col items-center justify-center  h-[100%] w-[50%] bg-neon ${signUpEffect} transition-all  duration-1000`}
+          className={`absolute flex flex-col items-center   justify-center h-[100%] w-[50%] ${signUpEffect}  [transition:left_1s,visibility_0.25s] `}
         >
           <SignUpCard setMode={setMode} />
         </div>
 
         <div
-          className={`w-[50%] flex justify-center items-center absolute h-[100%] bg-black ${bgEffect} transition-all  duration-1000 z-10`}
+          className={`w-[50%] flex justify-center items-center absolute h-[100%] ${bgEffect} bg-background transition-all  duration-login z-10`}
         >
           <div
-            className={`w-60 h-60 rounded-full ${circleEffect} transition-all duration-1000`}
+            className={`w-60 h-60 rounded-full ${circleEffect} transition-all duration-login`}
           ></div>
           <div className="w-full h-[50%] absolute bottom-0 backdrop-blur-[20px]"></div>
         </div>
 
         <div
-          className={`absolute flex flex-col items-center justify-center h-[100%]  w-[50%] ${signInEffect} transition-all  duration-1000 bg-white`}
+          className={`absolute flex flex-col  items-center justify-center  h-[100%]  w-[50%] ${signInEffect} [transition:left_1s,visibility_0.25s]  `}
         >
           <SignInCard setMode={setMode} />
         </div>
