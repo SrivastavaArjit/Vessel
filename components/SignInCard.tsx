@@ -1,8 +1,5 @@
 "use client";
-
-import Link from "next/link";
 import React from "react";
-import { FaGoogle } from "react-icons/fa";
 
 const SignInCard = ({ setMode }: { setMode: (val: string) => void }) => {
   return (
@@ -17,7 +14,7 @@ const SignInCard = ({ setMode }: { setMode: (val: string) => void }) => {
       <input
         type="email"
         required
-        className="ring-1 ring-black rounded-md p-2 mb-2 h-[40px] text-black focus:outline-none"
+        className="ring-1 ring-black  rounded-md p-2 mb-2 h-[40px]  "
         name="email"
       />
       <label htmlFor="password" className="font-bold">
@@ -26,12 +23,12 @@ const SignInCard = ({ setMode }: { setMode: (val: string) => void }) => {
       <input
         type="password"
         required
-        className="ring-1 ring-black mb-6 rounded-md p-2 h-[40px] text-black focus:outline-none"
+        className=" ring-1 ring-black mb-6 rounded-md p-2 h-[40px]"
         name="password"
       />
       <button
         type="submit"
-        className="ring-black p-2 rounded-md ring-1 mb-4 hover:bg-black/80 text-white bg-black"
+        className=" p-2 rounded-md  mb-4 hover:bg-red-400/80 text-white bg-red-400"
       >
         SIGN IN
       </button>

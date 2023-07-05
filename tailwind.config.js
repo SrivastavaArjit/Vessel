@@ -32,12 +32,13 @@ module.exports = {
       },
       colors: {
         neon: "#e0fb49",
+        background: "hsl(var(--background))",
       },
       fontSize: {
         xxs: "0.50rem",
       },
       transitionDuration: {
-        login: "800ms",
+        login: "1000ms",
       },
     },
   },
