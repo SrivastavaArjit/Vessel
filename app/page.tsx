@@ -7,15 +7,15 @@ export default function Home() {
   return (
     <main>
       <Header />
-      <div className="flex items-center justify-between px-14 py-16 bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('https://bridge180.qodeinteractive.com/wp-content/uploads/2018/03/home-slider-1.jpg')] bg-cover bg-[50%_5%] rounded-3xl h-[100vh]">
+      <div className="flex items-center justify-center lg:justify-between px-14 py-16 bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('https://bridge180.qodeinteractive.com/wp-content/uploads/2018/03/home-slider-1.jpg')] bg-cover bg-[50%_5%] sm:rounded-3xl h-[100vh]">
         <div className="text-center lg:text-left">
-          <h1 className="my-5 font-normal text-white text-5xl xl:text-6xl">
+          <h1 className="my-5 font-normal text-white text-3xl md:text-5xl xl:text-6xl">
             Simplicity is the ultimate <br /> sophistication:
           </h1>
-          <Button className="border border-white rounded-full bg-transparent text-white text-xs h-12 py-4 px-6 mr-2">
+          <Button className="border border-white rounded-full bg-transparent text-white text-xs h-12 py-4 px-6 mx-2 my-1">
             2023 Lookbook
           </Button>
-          <Button className="border border-white rounded-full bg-white text-black font-bold text-xs h-12 py-4 px-6">
+          <Button className="border border-white rounded-full bg-white text-black font-bold text-xs h-12 py-4 px-6 mx-2 my-1">
             Shop Now <ArrowTopRightIcon className="ml-2 font-bold" />
           </Button>
         </div>
