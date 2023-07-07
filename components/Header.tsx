@@ -1,26 +1,17 @@
 import Link from "next/link";
-import { Button, buttonVariants } from "./ui/button";
-import { HamburgerMenuIcon } from "@radix-ui/react-icons";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { cn } from "@/lib/utils";
 import { ThemeToggleButton } from "./ThemeToggleButton";
+import UserModeSelect from "./UserModeSelect";
+import Sheeet from "./Sheeet";
 
 const Header = () => {
   return (
     <>
-      <nav className="flex gap-4 bg-transparent h-8 justify-between items-center py-8 px-14">
-        <Link href="#">
+      <nav className="flex gap-4 bg-transparent h-8 justify-between items-center py-6 sm:py-7  px-1 sm:px-5  w-full ">
+        <Link className="hidden sm:block" href="#">
           {/* <FontAwesomeIcon icon= style={{ color: "#000000" }} /> */}
           <h2 className="text-4xl font-bold  ">VESSEL</h2>
         </Link>
+        <Sheeet />
         <ul className=" flex gap-10  items-center mr-8">
           <li className="hidden lg:inline ">
             <Link href="#">FashionForward</Link>
@@ -32,29 +23,9 @@ const Header = () => {
             <Link href="#">FashionDiary</Link>
           </li>
         </ul>
-        <div className="flex gap-4">
+        <div className="scale-[85%] sm:scale-100 flex gap-2">
           <ThemeToggleButton />
-          <Link
-            href="/login"
-            className={cn(
-              buttonVariants(),
-              " rounded-full bg-transparent text-black border-black border w-24 hover:text-white -mr-2"
-            )}
-          >
-            Sign In
-          </Link>
-          <div className="lg:hidden">
-            <DropdownMenu>
-              <DropdownMenuTrigger className="bg-black p-2 rounded-full">
-                <HamburgerMenuIcon className="text-white h-5 w-5" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-white lg:hidden text-black border border-black shadow-[3px_3px_0_rgb(0,0,0)] hover:bg-red-400">
-                <DropdownMenuItem>FashionForward</DropdownMenuItem>
-                <DropdownMenuItem>StyleSquad</DropdownMenuItem>
-                <DropdownMenuItem>FashionDiary</DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </div>
+          <UserModeSelect />
         </div>
       </nav>
     </>
